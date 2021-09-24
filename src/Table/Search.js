@@ -1,11 +1,16 @@
-import React from 'react'
-import './Table.css'
+import Ract from 'react'
 
-function search() {
+const search = () => {
   return (
-    <div class="header">
-      <input type="text" placeholder="Search person" />
-      <button>Button</button>
+    <div className="container">
+      <ul className="header">
+        <li className="header-item">
+          <input type="text" placeholder="search by first name" />
+        </li>
+        <li className="header-item">
+          <button className="btn">button</button>
+        </li>
+      </ul>
     </div>
   )
 }
