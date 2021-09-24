@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Loader from './Loader/Loader'
 import Table from './Table/Table'
+import Pagination from './Table/Pagination'
+import Search from './Table/Search'
 import DetailRowView from './Info/DetailRowView'
 import './App.css'
 import _ from 'lodash'
@@ -42,8 +44,12 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="container">
+        {
+          <Search />
+        }
         {
           this.state.isLoading
            ? <Loader /> 
@@ -54,6 +60,9 @@ class App extends Component {
            sortField = {this.state.sortField}
            onRowSelect={this.onRowSelect}
            />
+        }
+        {
+          <Pagination />
         }
         {
           this.state.row ? <DetailRowView person={this.state.row} /> : null

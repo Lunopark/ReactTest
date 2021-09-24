@@ -1,3 +1,12 @@
+.header {
+	width: 900px;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+input:active {
+	border-color: #00FFC4;
+}
+
 .table {
 	width: 900px;
 	border: none;
@@ -34,3 +43,38 @@
 .table tbody tr td:last-child {
 	border-radius: 0 8px 8px 0;
 }
+
+.pagination {
+	width: 900px;
+	height: 60px;
+	margin: 0 auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.pagination a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 30px;
+  width: 30px;
+  text-decoration: none;
+  transition: background-color .2s;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pagination a.active {
+  background-color: #fff;
+  color: #00FFC4;
+  border: 1px solid #00FFC4;
+}
+
+.pagination a.disabled { 
+  opacity: 0.2;
+}
+.pagination a:hover:not(.active) {background-color: rgb(238, 238, 238);}

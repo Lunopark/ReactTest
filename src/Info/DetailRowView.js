@@ -1,9 +1,9 @@
 import React from 'react'
-import './Info.css'
+import './Information.css'
 
 export default ({person}) => (
   <div className="container">
-    <div classNameme="info">
+    <div className="info">
       <p>Profile info:</p>
       <p>Selected profile: {person.firstName + ' ' + person.lastName}</p>
       <p>Description: {person.description}</p>
